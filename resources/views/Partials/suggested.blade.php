@@ -56,6 +56,15 @@
 	    </tr>
 
 	    <tr>
+	    	<th class="text-right">HR Rates</th>
+	    	<td class="text-center">{{ number_format($Actual_HR_rate_A,2) }}</td>
+	    	<td class="text-center">{{ number_format($Actual_HR_rate_B,2) }}</td>
+	    	<td class="text-center">{{ number_format($Actual_HR_rate_C,2) }}</td>
+	    	<td></td>
+	    	<td></td>
+	    </tr>
+
+	    <tr>
 	    	<th class="text-right">FCR Rates</th>
 	    	<td class="text-center">{{ number_format($result->FCR_rate_A,2) }}</td>
 	    	<td class="text-center">{{ number_format($result->FCR_rate_B,2) }}</td>
@@ -82,18 +91,32 @@
 	    	<td></td>
 	    </tr>
 
+	     <tr>
+	    	<td></td>
+	    	<th colspan="5" class="text-center">Income</th>
+	    </tr>
+
 	    <tr>
 	    	<th class="text-right">Income</th>
-	    	<td class="text-center">{{ 'PHP ' . number_format($Birds_A * ($result->FCR_rate_A + $result->FCRi_rate_A + $result->BPI_rate_A)) }}</td>
-	    	<td class="text-center">{{ 'PHP ' . number_format($Birds_B * ($result->FCR_rate_B + $result->FCRi_rate_A + $result->BPI_rate_B)) }}</td>
-	    	<td class="text-center">{{ 'PHP ' . number_format($Birds_C * ($result->FCR_rate_C + $result->FCRi_rate_A + $result->BPI_rate_C)) }}</td>
+	    	<td class="text-center">{{ 'PHP ' . number_format($Birds_A * ($Actual_HR_rate_A + $result->FCR_rate_A + $result->FCRi_rate_A + $result->BPI_rate_A)) }}</td>
+	    	<td class="text-center">{{ 'PHP ' . number_format($Birds_B * ($Actual_HR_rate_B + $result->FCR_rate_B + $result->FCRi_rate_B + $result->BPI_rate_B)) }}</td>
+	    	<td class="text-center">{{ 'PHP ' . number_format($Birds_C * ($Actual_HR_rate_C + $result->FCR_rate_C + $result->FCRi_rate_C + $result->BPI_rate_C)) }}</td>
 	    	<td></td>
 	    	<td></td>
 	    </tr>
 
 	    <tr>
+	    	<th class="text-right">ALW Incentive</th>
+	    	<td class="text-center">{{ 'PHP ' . number_format($Actual_ALW_Income_A) }}</td>
+	    	<td class="text-center">{{ 'PHP ' . number_format($Actual_ALW_Income_B) }}</td>
+	    	<td class="text-center">{{ 'PHP ' . number_format($Actual_ALW_Income_C) }}</td>
+	    	<td></td>
+	    	<td></td>
+	    </tr>
+	    
+	    <tr>
 	    	<th class="text-right">Total Income</th>
-	    	<td class="text-center" colspan="5">{{ 'PHP ' . number_format($result->total_income) }}</td>
+	    	<td class="text-center" colspan="5">{{ 'PHP ' . number_format($result->total_income + $Actual_ALW_Income_A + $Actual_ALW_Income_B + $Actual_ALW_Income_C) }}</td>
 	    </tr>
 
 	</tbody>

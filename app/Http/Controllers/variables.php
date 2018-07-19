@@ -60,9 +60,26 @@ $Actual_BPI_rate_C = DB::table('BPI_rates')
 				->where('start','<=',$BPI_C)
 				->where('end','>=',$BPI_C)
 				->pluck('rate')->first();
-$Income_A = $Birds_A * ($Actual_FCR_rate_A + $Actual_FCRi_rate_A + $Actual_BPI_rate_A);
-$Income_B = $Birds_B * ($Actual_FCR_rate_B + $Actual_FCRi_rate_B + $Actual_BPI_rate_B);
-$Income_C = $Birds_C * ($Actual_FCR_rate_C + $Actual_FCRi_rate_C + $Actual_BPI_rate_C);
-
+$Actual_ALW_Income_A = $request->Actual_ALW_Income_A;
+$Actual_ALW_Income_B = $request->Actual_ALW_Income_B;
+$Actual_ALW_Income_C = $request->Actual_ALW_Income_C;
+$Actual_HR_rate_A = DB::table('HR_rates')
+				->where('start','<=',$HR_A)
+				->where('end','>=',$HR_A)
+				->pluck('rate')->first();
+$Actual_HR_rate_B = DB::table('HR_rates')
+				->where('start','<=',$HR_B)
+				->where('end','>=',$HR_B)
+				->pluck('rate')->first();
+$Actual_HR_rate_C = DB::table('HR_rates')
+				->where('start','<=',$HR_C)
+				->where('end','>=',$HR_C)
+				->pluck('rate')->first();
+$Income_A = $Birds_A * ($Actual_FCR_rate_A + $Actual_FCRi_rate_A + $Actual_BPI_rate_A + $Actual_HR_rate_A);
+$Income_B = $Birds_B * ($Actual_FCR_rate_B + $Actual_FCRi_rate_B + $Actual_BPI_rate_B + $Actual_HR_rate_B);
+$Income_C = $Birds_C * ($Actual_FCR_rate_C + $Actual_FCRi_rate_C + $Actual_BPI_rate_C + $Actual_HR_rate_C);
+$Qty_Started_A = $request->Qty_Started_A;
+$Qty_Started_B = $request->Qty_Started_B;
+$Qty_Started_C = $request->Qty_Started_C;
 
 ?>

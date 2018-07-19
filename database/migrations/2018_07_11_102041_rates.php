@@ -29,6 +29,20 @@ class Rates extends Migration
             $table->float('rate');
         });
 
+        Schema::create('ALW_rates', function (Blueprint $table) {
+            $table->increments('id');
+            $table->float('start',5,3);
+            $table->float('end',5,3);
+            $table->float('rate');
+        });
+
+        Schema::create('HR_rates', function (Blueprint $table) {
+            $table->increments('id');
+            $table->float('start',5,2);
+            $table->float('end',5,2);
+            $table->float('rate');
+        });
+
     }
 
     public function down()

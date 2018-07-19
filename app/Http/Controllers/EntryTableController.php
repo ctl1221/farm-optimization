@@ -87,9 +87,9 @@ class EntryTableController extends Controller
 			{
 				for($k=0; $k<$n; $k++)
 				{
-					$Current_Income = $Birds_A * ($Computed_BPI_A_rate[$i] + $FCR_ranges_rate[$i] + $FCRi_ranges_rate[$i]);
-					$Current_Income+= $Birds_B * ($Computed_BPI_B_rate[$j] + $FCR_ranges_rate[$j] + $FCRi_ranges_rate[$j]);
-					$Current_Income+= $Birds_C * ($Computed_BPI_C_rate[$k] + $FCR_ranges_rate[$k] + $FCRi_ranges_rate[$k]);
+					$Current_Income = $Birds_A * ($Computed_BPI_A_rate[$i] + $FCR_ranges_rate[$i] + $FCRi_ranges_rate[$i] + $Actual_HR_rate_A);
+					$Current_Income+= $Birds_B * ($Computed_BPI_B_rate[$j] + $FCR_ranges_rate[$j] + $FCRi_ranges_rate[$j] + $Actual_HR_rate_B);
+					$Current_Income+= $Birds_C * ($Computed_BPI_C_rate[$k] + $FCR_ranges_rate[$k] + $FCRi_ranges_rate[$k] + $Actual_HR_rate_C);
 
 					$Current_Total_Feeds = $Computed_Feeds_A[$i] + $Computed_Feeds_B[$j] + $Computed_Feeds_C[$k];
 
@@ -121,6 +121,9 @@ class EntryTableController extends Controller
 			    						'BPI_A' => $Computed_BPI_A[$i],
 			    						'BPI_B' => $Computed_BPI_B[$j],
 			    						'BPI_C' => $Computed_BPI_C[$k],
+			    						'HR_rate_A' =>$Actual_HR_rate_A,
+			    						'HR_rate_B' =>$Actual_HR_rate_B,
+			    						'HR_rate_C' =>$Actual_HR_rate_C,
 			    					]);
 
 		    					$Optimal_Income = $Current_Income;
@@ -148,7 +151,7 @@ class EntryTableController extends Controller
 				->first();
 		}
 		
-    	return view ('EntryTable.show', compact ('result', 'Birds_A', 'Birds_B', 'Birds_C', 'Age_A', 'Age_B', 'Age_C', 'ALW_A', 'ALW_B', 'ALW_C', 'HR_A', 'HR_B', 'HR_C', 'Feeds_A', 'Feeds_B', 'Feeds_C', 'FCR_A', 'FCR_B', 'FCR_C', 'BPI_A', 'BPI_B', 'BPI_C', 'Actual_FCR_rate_A', 'Actual_FCR_rate_B', 'Actual_FCR_rate_C', 'Actual_BPI_rate_A', 'Actual_BPI_rate_B', 'Actual_BPI_rate_C', 'Income_A', 'Income_B', 'Income_C', 'Actual_FCRi_rate_A', 'Actual_FCRi_rate_B', 'Actual_FCRi_rate_C'));
+    	return view ('EntryTable.show', compact ('result', 'Birds_A', 'Birds_B', 'Birds_C', 'Age_A', 'Age_B', 'Age_C', 'ALW_A', 'ALW_B', 'ALW_C', 'HR_A', 'HR_B', 'HR_C', 'Feeds_A', 'Feeds_B', 'Feeds_C', 'FCR_A', 'FCR_B', 'FCR_C', 'BPI_A', 'BPI_B', 'BPI_C', 'Actual_FCR_rate_A', 'Actual_FCR_rate_B', 'Actual_FCR_rate_C', 'Actual_BPI_rate_A', 'Actual_BPI_rate_B', 'Actual_BPI_rate_C', 'Income_A', 'Income_B', 'Income_C', 'Actual_FCRi_rate_A', 'Actual_FCRi_rate_B', 'Actual_FCRi_rate_C', 'Actual_ALW_Income_A', 'Actual_ALW_Income_B', 'Actual_ALW_Income_C', 'Actual_HR_rate_A', 'Actual_HR_rate_B', 'Actual_HR_rate_C'));
     }
 
 }

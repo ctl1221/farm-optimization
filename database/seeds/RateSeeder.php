@@ -429,13 +429,6 @@ class RateSeeder extends Seeder
             'rate' => 7.95
         ]);  
 
-
-
-
-
-
-
-
      	DB::table('FCR_rates')->insert([
         	'start' => 1.5901,
         	'end' => 1.6000,
@@ -873,5 +866,103 @@ class RateSeeder extends Seeder
         	'end' => 2.3200,
         	'rate' => -3.01
         ]);
+
+        //ALW Rates
+        DB::table('ALW_rates')->insert([
+            'start' => 0.700,
+            'end' => 1.000,
+            'rate' => 2.00
+        ]); 
+
+        DB::table('ALW_rates')->insert([
+            'start' => 1.001,
+            'end' => 1.399,
+            'rate' => 2.50
+        ]); 
+
+        DB::table('ALW_rates')->insert([
+            'start' => 1.400,
+            'end' => 1.499,
+            'rate' => 3.15
+        ]); 
+
+        DB::table('ALW_rates')->insert([
+            'start' => 1.500,
+            'end' => 1.549,
+            'rate' => 3.80
+        ]); 
+
+        DB::table('ALW_rates')->insert([
+            'start' => 1.550,
+            'end' => 5.000,
+            'rate' => 5.30
+        ]);
+
+        //HR Rates
+        DB::table('HR_rates')->insert([
+            'start' => 50.00,
+            'end' => 89.99,
+            'rate' => 0.25
+        ]); 
+
+        DB::table('HR_rates')->insert([
+            'start' => 90.00,
+            'end' => 92.99,
+            'rate' => 0.50
+        ]); 
+
+        DB::table('HR_rates')->insert([
+            'start' => 93.00,
+            'end' => 94.99,
+            'rate' => 1.00
+        ]); 
+
+        DB::table('HR_rates')->insert([
+            'start' => 95.00,
+            'end' => 95.50,
+            'rate' => 1.50
+        ]); 
+
+        DB::table('HR_rates')->insert([
+            'start' => 95.51,
+            'end' => 96.00,
+            'rate' => 2.00
+        ]);         
+
+        DB::table('HR_rates')->insert([
+            'start' => 96.01,
+            'end' => 96.50,
+            'rate' => 2.25
+        ]);  
+
+        DB::table('HR_rates')->insert([
+            'start' => 96.51,
+            'end' => 97.00,
+            'rate' => 2.50
+        ]);
+
+        DB::table('HR_rates')->insert([
+            'start' => 97.01,
+            'end' => 97.50,
+            'rate' => 2.75
+        ]);    
+
+        DB::table('HR_rates')->insert([
+            'start' => 97.51,
+            'end' => 98.00,
+            'rate' => 3.00
+        ]);  
+
+        DB::table('HR_rates')->insert([
+            'start' => 98.01,
+            'end' => 98.50,
+            'rate' => 3.25
+        ]);  
+
+        DB::table('HR_rates')->insert([
+            'start' => 98.51,
+            'end' => 100.00,
+            'rate' => 3.50
+        ]);  
     }
 }

@@ -30,7 +30,9 @@ class FeedsData extends Migration
             $table->integer('BPI_A')->default(0);
             $table->integer('BPI_B')->default(0);
             $table->integer('BPI_C')->default(0);
-
+            $table->float('HR_rate_A',4,2)->default(0);
+            $table->float('HR_rate_B',4,2)->default(0);
+            $table->float('HR_rate_C',4,2)->default(0);
         });
     }
 

@@ -92,6 +92,15 @@
 	    </tr>
 
 	    <tr>
+	    	<th class="text-right">HR Rates</th>
+	    	<td class="text-center">{{ number_format($Actual_HR_rate_A,2) }}</td>
+	    	<td class="text-center">{{ number_format($Actual_HR_rate_B,2) }}</td>
+	    	<td class="text-center">{{ number_format($Actual_HR_rate_C,2) }}</td>
+	    	<td></td>
+	    	<td></td>
+	    </tr>
+
+	    <tr>
 	    	<th class="text-right">FCR Rates</th>
 	    	<td class="text-center">{{ $Actual_FCR_rate_A }}</td>
 	    	<td class="text-center">{{ $Actual_FCR_rate_B }}</td>
@@ -119,6 +128,11 @@
 	    </tr>
 
 	    <tr>
+	    	<td></td>
+	    	<th colspan="5" class="text-center">Income</th>
+	    </tr>
+
+	    <tr>
 	    	<th class="text-right">Income</th>
 	    	<td class="text-center">{{ 'PHP ' . number_format($Income_A) }}</td>
 	    	<td class="text-center">{{ 'PHP ' . number_format($Income_B) }}</td>
@@ -128,8 +142,17 @@
 	    </tr>
 
 	    <tr>
+	    	<th class="text-right">ALW Incentive</th>
+	    	<td class="text-center">{{ 'PHP ' . number_format($Actual_ALW_Income_A) }}</td>
+	    	<td class="text-center">{{ 'PHP ' . number_format($Actual_ALW_Income_B) }}</td>
+	    	<td class="text-center">{{ 'PHP ' . number_format($Actual_ALW_Income_C) }}</td>
+	    	<td></td>
+	    	<td></td>
+	    </tr>
+
+	    <tr>
 	    	<th class="text-right">Total Income</th>
-	    	<td class="text-center" colspan="5">{{ 'PHP ' . number_format($Income_A + $Income_B + $Income_C) }}</td>
+	    	<td class="text-center" colspan="5">{{ 'PHP ' . number_format($Income_A + $Income_B + $Income_C + $Actual_ALW_Income_A + $Actual_ALW_Income_B + $Actual_ALW_Income_C) }}</td>
 	    </tr>
 	</tbody>
 </table>
