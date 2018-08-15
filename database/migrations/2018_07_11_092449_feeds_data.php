@@ -34,10 +34,23 @@ class FeedsData extends Migration
             $table->float('HR_rate_B',4,2)->default(0);
             $table->float('HR_rate_C',4,2)->default(0);
         });
+
+        Schema::create('birds_data', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('Computed_Birds_A');
+            $table->integer('Computed_Birds_B');
+            $table->integer('Computed_Birds_C');
+            $table->integer('Computed_Total_Birds');
+            $table->float('Computed_HR_Income');
+            $table->float('HR_rate_A',4,2)->default(0);
+            $table->float('HR_rate_B',4,2)->default(0);
+            $table->float('HR_rate_C',4,2)->default(0);
+        });
     }
 
     public function down()
     {
         Schema::dropIfExists('feeds_data');
+        Schema::dropIfExists('birds_data');
     }
 }

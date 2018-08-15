@@ -74,9 +74,9 @@
 
 	    <tr>
 	    	<th class="text-right">Feeds Consumed</th>
-	    	<td class="text-center">{{ $Feeds_A }}</td>
-	    	<td class="text-center">{{ $Feeds_B }}</td>
-	    	<td class="text-center">{{ $Feeds_C }}</td>
+	    	<td class="text-center">{{ number_format($Feeds_A) }}</td>
+	    	<td class="text-center">{{ number_format($Feeds_B) }}</td>
+	    	<td class="text-center">{{ number_format($Feeds_C) }}</td>
 	    	<td></td>
 	    	<td></td>
 	    </tr>

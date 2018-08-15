@@ -11,6 +11,25 @@
 
     <body>
        <div class="container">
+            <nav class="navbar navbar-expand-sm" style="background-color: #D3E1E0">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" style="color: black" href="/calculator">Profit Calculator</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" style="color: black" href="#" id="navbardrop" data-toggle="dropdown">Contract Rates</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="/rates-ALW">ALW</a>
+                            <a class="dropdown-item" href="/rates-BPI">BPI</a>
+                            <a class="dropdown-item" href="/rates-FCR">FCR</a>
+                            <a class="dropdown-item" href="/rates-FCRi">FCRi</a>
+                            <a class="dropdown-item" href="/rates-HR">HR</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav> 
+            <br>
             @yield('content')
        </div>
     </body>

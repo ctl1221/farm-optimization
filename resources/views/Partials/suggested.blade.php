@@ -22,7 +22,7 @@
 	    	<th class="text-right">Feeds Conversion Ratio (FCR)</th>
 	    	<td class="text-center">{{ number_format($result->farm_A * 50 / $Birds_A / $ALW_A,4) }}</td>
 	    	<td class="text-center">{{ number_format($result->farm_B * 50 / $Birds_B / $ALW_B,4) }}</td>
-	    	<td class="text-center">{{ number_format($result->farm_B * 50 / $Birds_C / $ALW_C,4) }}</td>
+	    	<td class="text-center">{{ number_format($result->farm_C * 50 / $Birds_C / $ALW_C,4) }}</td>
 	    	<td></td>
 	    	<td></td>
 	    </tr>
