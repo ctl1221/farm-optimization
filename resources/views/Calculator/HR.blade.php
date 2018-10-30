@@ -68,6 +68,7 @@
 	    	<td colspan="5">
 	    </tr>
 
+	    @if($result)
 	    <tr>
 	    	<th class="text-right">Suggested Bird Count</th>
 	    	<td class="text-center">{{ number_format($result->Computed_Birds_A) }}</td>
@@ -95,6 +96,7 @@
 	    	<th class="text-right">Income</th>
 	    	<td class="text-center" colspan="5">{{ 'PHP ' . number_format($result->Computed_HR_Income)}}</td>
 	    </tr>
+	    @endif
 
 	</tbody>
 </table>

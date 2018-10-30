@@ -13,26 +13,33 @@ class FeedsData extends Migration
             $table->integer('farm_A');
             $table->integer('farm_B');
             $table->integer('farm_C');
+            $table->integer('farm_D');
             $table->integer('total_feeds');
             $table->integer('total_income')->default(0);
             $table->float('BPI_rate_A',4,2)->default(0);
             $table->float('BPI_rate_B',4,2)->default(0);
             $table->float('BPI_rate_C',4,2)->default(0);
+            $table->float('BPI_rate_D',4,2)->default(0);
             $table->float('FCR_rate_A',4,2)->default(0);
             $table->float('FCR_rate_B',4,2)->default(0);
             $table->float('FCR_rate_C',4,2)->default(0);
+            $table->float('FCR_rate_D',4,2)->default(0);
             $table->float('FCRi_rate_A',4,2)->default(0);
             $table->float('FCRi_rate_B',4,2)->default(0);
             $table->float('FCRi_rate_C',4,2)->default(0);
+            $table->float('FCRi_rate_D',4,2)->default(0);
             $table->float('FCR_A',6,4)->default(0);
             $table->float('FCR_B',6,4)->default(0);
             $table->float('FCR_C',6,4)->default(0);
+            $table->float('FCR_D',6,4)->default(0);
             $table->integer('BPI_A')->default(0);
             $table->integer('BPI_B')->default(0);
             $table->integer('BPI_C')->default(0);
+            $table->integer('BPI_D')->default(0);
             $table->float('HR_rate_A',4,2)->default(0);
             $table->float('HR_rate_B',4,2)->default(0);
             $table->float('HR_rate_C',4,2)->default(0);
+            $table->float('HR_rate_D',4,2)->default(0);
         });
 
         Schema::create('birds_data', function (Blueprint $table) {

@@ -18,7 +18,7 @@
 	    	<td class="text-center">{{ number_format($Birds_A) }}</td>
 	    	<td class="text-center">{{ number_format($Birds_B) }}</td>
 	    	<td class="text-center">{{ number_format($Birds_C) }}</td>
-	    	<td></td>
+	    	<td class="text-center">{{ number_format($Birds_D) }}</td>
 	    	<td></td>
 	    </tr>
 
@@ -27,7 +27,7 @@
 	    	<td class="text-center">{{ $Age_A }}</td>
 	    	<td class="text-center">{{ $Age_B }}</td>
 	    	<td class="text-center">{{ $Age_C }}</td>
-	    	<td></td>
+	    	<td class="text-center">{{ $Age_D }}</td>
 	    	<td></td>
 	    </tr>
 
@@ -36,7 +36,7 @@
 	    	<td class="text-center">{{ $ALW_A }}</td>
 	    	<td class="text-center">{{ $ALW_B }}</td>
 	    	<td class="text-center">{{ $ALW_C }}</td>
-	    	<td></td>
+	    	<td class="text-center">{{ $ALW_D }}</td>
 	    	<td></td>
 	    </tr>
 
@@ -45,7 +45,7 @@
 	    	<td class="text-center">{{ $HR_A }}</td>
 	    	<td class="text-center">{{ $HR_B }}</td>
 	    	<td class="text-center">{{ $HR_C }}</td>
-	    	<td></td>
+	    	<td class="text-center">{{ $HR_D }}</td>
 	    	<td></td>
 	    </tr>
 
@@ -59,7 +59,7 @@
 	    	<td class="text-center">{{ $FCR_A }}</td>
 	    	<td class="text-center">{{ $FCR_B }}</td>
 	    	<td class="text-center">{{ $FCR_C }}</td>
-	    	<td></td>
+	    	<td class="text-center">{{ $FCR_D }}</td>
 	    	<td></td>
 	    </tr>
 
@@ -68,7 +68,7 @@
 	    	<td class="text-center">{{ $BPI_A }}</td>
 	    	<td class="text-center">{{ $BPI_B }}</td>
 	    	<td class="text-center">{{ $BPI_C }}</td>
-	    	<td></td>
+	    	<td class="text-center">{{ $BPI_D }}</td>
 	    	<td></td>
 	    </tr>
 
@@ -77,13 +77,13 @@
 	    	<td class="text-center">{{ number_format($Feeds_A) }}</td>
 	    	<td class="text-center">{{ number_format($Feeds_B) }}</td>
 	    	<td class="text-center">{{ number_format($Feeds_C) }}</td>
-	    	<td></td>
+	    	<td class="text-center">{{ number_format($Feeds_D) }}</td>
 	    	<td></td>
 	    </tr>
 
 	    <tr>
 	    	<th class="text-right">Total Feeds Consumed</th>
-	    	<td class="text-center" colspan="5">{{ number_format($Feeds_A + $Feeds_B + $Feeds_C) }}</td>
+	    	<td class="text-center" colspan="5">{{ number_format($Feeds_A + $Feeds_B + $Feeds_C + $Feeds_D) }}</td>
 	    </tr>
 	    	
 	    <tr>
@@ -96,7 +96,7 @@
 	    	<td class="text-center">{{ number_format($Actual_HR_rate_A,2) }}</td>
 	    	<td class="text-center">{{ number_format($Actual_HR_rate_B,2) }}</td>
 	    	<td class="text-center">{{ number_format($Actual_HR_rate_C,2) }}</td>
-	    	<td></td>
+	    	<td class="text-center">{{ number_format($Actual_HR_rate_D,2) }}</td>
 	    	<td></td>
 	    </tr>
 
@@ -105,7 +105,7 @@
 	    	<td class="text-center">{{ $Actual_FCR_rate_A }}</td>
 	    	<td class="text-center">{{ $Actual_FCR_rate_B }}</td>
 	    	<td class="text-center">{{ $Actual_FCR_rate_C }}</td>
-	    	<td></td>
+	    	<td class="text-center">{{ $Actual_FCR_rate_D }}</td>
 	    	<td></td>
 	    </tr>
 
@@ -114,7 +114,7 @@
 	    	<td class="text-center">{{ number_format($Actual_FCRi_rate_A,2) }}</td>
 	    	<td class="text-center">{{ number_format($Actual_FCRi_rate_B,2) }}</td>
 	    	<td class="text-center">{{ number_format($Actual_FCRi_rate_C,2) }}</td>
-	    	<td></td>
+	    	<td class="text-center">{{ number_format($Actual_FCRi_rate_D,2) }}</td>
 	    	<td></td>
 	    </tr>
 
@@ -123,7 +123,7 @@
 	    	<td class="text-center">{{ number_format($Actual_BPI_rate_A,2) }}</td>
 	    	<td class="text-center">{{ number_format($Actual_BPI_rate_B,2) }}</td>
 	    	<td class="text-center">{{ number_format($Actual_BPI_rate_C,2) }}</td>
-	    	<td></td>
+	    	<td class="text-center">{{ number_format($Actual_BPI_rate_D,2) }}</td>
 	    	<td></td>
 	    </tr>
 
@@ -137,7 +137,7 @@
 	    	<td class="text-center">{{ 'PHP ' . number_format($Income_A) }}</td>
 	    	<td class="text-center">{{ 'PHP ' . number_format($Income_B) }}</td>
 	    	<td class="text-center">{{ 'PHP ' . number_format($Income_C) }}</td>
-	    	<td></td>
+	    	<td class="text-center">{{ 'PHP ' . number_format($Income_D) }}</td>
 	    	<td></td>
 	    </tr>
 
@@ -146,13 +146,13 @@
 	    	<td class="text-center">{{ 'PHP ' . number_format($Actual_ALW_Income_A) }}</td>
 	    	<td class="text-center">{{ 'PHP ' . number_format($Actual_ALW_Income_B) }}</td>
 	    	<td class="text-center">{{ 'PHP ' . number_format($Actual_ALW_Income_C) }}</td>
-	    	<td></td>
+	    	<td class="text-center">{{ 'PHP ' . number_format($Actual_ALW_Income_D) }}</td>
 	    	<td></td>
 	    </tr>
 
 	    <tr>
 	    	<th class="text-right">Total Income</th>
-	    	<td class="text-center" colspan="5">{{ 'PHP ' . number_format($Income_A + $Income_B + $Income_C + $Actual_ALW_Income_A + $Actual_ALW_Income_B + $Actual_ALW_Income_C) }}</td>
+	    	<td class="text-center" colspan="5">{{ 'PHP ' . number_format($Income_A + $Income_B + $Income_C + $Income_D + $Actual_ALW_Income_A + $Actual_ALW_Income_B + $Actual_ALW_Income_C + $Actual_ALW_Income_D) }}</td>
 	    </tr>
 	</tbody>
 </table>
